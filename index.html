@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cafee Delight</title>
+  
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+
+  <!-- AOS (Animate on Scroll) -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- 🌗 Light/Dark Toggle -->
+<button id="toggle-mode"><i class="fas fa-moon"></i></button>
+
+<!-- 🔝 Scroll to Top -->
+<button id="scrollToTop"><i class="fas fa-arrow-up"></i></button>
+
+<header data-aos="fade-down">
+  <h1><i class="fas fa-mug-hot"></i> Cafee Delight</h1>
+  <nav>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#menu">Menu</a></li>
+      <li><a href="#packages">Packages</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+</header><br>
+
+<section id="home" data-aos="fade-up">
+  <h2>Welcome to Cafee Delight</h2>
+  <p style="text-align: center;">Your favorite place for coffee and pastries. <strong>Family, Friends & Student Packages</strong> available!</p>
+</section>
+
+<section id="menu" data-aos="fade-up">
+  <h2>Our Menu</h2>
+  <h3>☕ Hot Drinks</h3>
+  <ul>
+    <li><i class="fas fa-mug-hot"></i> Espresso - $2.50</li>
+    <li><i class="fas fa-coffee"></i> Cappuccino - $3.00</li>
+    <li><i class="fas fa-coffee"></i> Latte - $3.50</li>
+    <li><i class="fas fa-coffee"></i> Black Coffee - $2.00</li>
+  </ul>
+  <br><br><br>
+
+  <h3>🥤 Cold Drinks</h3>
+  <ul>
+    <li><i class="fas fa-ice-cream"></i> Iced Coffee - $3.50</li>
+    <li><i class="fas fa-glass-whiskey"></i> Cold Brew - $3.80</li>
+    <li><i class="fas fa-wine-glass-alt"></i> Lemon Iced Tea - $2.80</li>
+    <li><i class="fas fa-blender-phone"></i> Chocolate Shake - $4.00</li>
+  </ul>
+  <br><br><br>
+
+  <h3>🍰 Pastries</h3>
+  <ul>
+    <li><i class="fas fa-bread-slice"></i> Chocolate Croissant - $3.00</li>
+    <li><i class="fas fa-cookie"></i> Cookies - $2.50</li>
+    <li><i class="fas fa-birthday-cake"></i> Mini Cake - $4.00</li>
+    <li><i class="fas fa-ice-cream"></i> Cream Puff - $3.50</li>
+  </ul>
+  <br><br><br>
+
+  <h3>🍕 Snacks</h3>
+  <ul>
+    <li><i class="fas fa-pizza-slice"></i> Cheese Pizza - $2.00</li>
+    <li><i class="fas fa-hamburger"></i> Mini Burger - $3.00</li>
+    <li><i class="fas fa-bacon"></i> Sandwich - $3.50</li>
+    <li><i class="fas fa-egg"></i> Egg Roll - $2.50</li>
+  </ul>
+</section>
+
+<section id="packages" data-aos="zoom-in-up">
+  <h2>Special Packages</h2>
+  <div class="package">
+    <img src="family.webp" alt="Family Package">
+    <h3>Family Package</h3>
+    <p>4 coffees, 4 pastries - <strong>$15.00</strong></p>
+  </div>
+  <div class="package">
+    <img src="friend.jpg" alt="Friends Package">
+    <h3>Friends Package</h3>
+    <p>3 coffees, 3 snacks - <strong>$12.00</strong></p>
+  </div>
+  <div class="package">
+    <img src="student.jpg" alt="Students Package">
+    <h3>Students Package</h3>
+    <p>2 coffees, 2 cookies - <strong>$8.00</strong></p>
+  </div>
+</section>
+
+<section id="about" data-aos="fade-up">
+  <h2>About Us</h2>
+  <p>
+    Welcome to <strong>Cafee Delight</strong>, your cozy escape in the heart of the city. Since opening our doors in 2020, we’ve been passionate about crafting the perfect cup of coffee and pairing it with delightful treats. Whether you're grabbing a quick espresso or enjoying a pastry with friends, we make sure every moment here feels special.
+  </p>
+  <p>
+    Our mission is to bring people together with warmth, flavor, and a relaxing environment. We pride ourselves on using only premium ingredients and delivering excellent customer service. At Cafee Delight, it’s more than coffee — it’s a community.
+  </p>
+</section>
+
+
+<section id="contact" data-aos="fade-up">
+  <h2>Contact Us</h2>
+  <form>
+    <label for="name">Name:</label>
+    <input type="text" id="name" required>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" required>
+
+    <label for="message">Message:</label>
+    <textarea id="message" rows="4" required></textarea>
+
+    <button type="submit"><i class="fas fa-paper-plane"></i> Send</button>
+  </form>
+</section>
+
+<!-- 👣 Footer -->
+<footer>
+  <p>&copy; 2025 Cafee Delight. All rights reserved.</p>
+  <p><i class="fas fa-map-marker-alt"></i> Lahore, Pakistan</p>
+</footer>
+
+<!-- AOS Script -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+
+<!-- JS for Mode & Scroll Top -->
+<script>
+  // 🌗 Mode Toggle
+  const toggleBtn = document.getElementById('toggle-mode');
+  toggleBtn.onclick = () => {
+    document.body.classList.toggle('dark-mode');
+    toggleBtn.innerHTML = document.body.classList.contains('dark-mode') ?
+      '<i class="fas fa-sun"></i>' : '<i class="fas fa-moon"></i>';
+  };
+
+  // 🔝 Scroll to Top
+  const scrollBtn = document.getElementById('scrollToTop');
+  window.onscroll = () => {
+    scrollBtn.style.display = window.scrollY > 100 ? 'block' : 'none';
+  };
+  scrollBtn.onclick = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+</script>
+
+</body>
+</html>
+<!-- AOS Script -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+<!-- Your Custom JavaScript File -->
+<script src="script.js"></script>
